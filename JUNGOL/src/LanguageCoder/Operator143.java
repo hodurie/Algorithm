@@ -1,4 +1,4 @@
-package LanguageCoder;
+package LanguageCoder; 
 import java.util.Scanner;
 
 public class Operator143 {
