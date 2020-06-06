@@ -1,5 +1,5 @@
 package LanguageCoder;
-eimport java.util.Scanner;
+import java.util.Scanner;
 
 public class Function232 {
 	public static void main(String[] args) {
