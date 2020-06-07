@@ -1,3 +1,4 @@
+package LanguageCoder;
 import java.util.Scanner;
 
 public class Function236 {
