@@ -18,7 +18,7 @@ public class SW_1946 {
 			}
 			
 			int count = 0;
-			System.out.println("#" + t+1);
+			System.out.println("#" + (t+1));
 			
 			for (int i = 0; i < size; i++) {
 				for (int j = 0; j < num[i]; j++) {
