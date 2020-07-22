@@ -2,7 +2,6 @@ package D3;
 
 import java.util.Scanner;
 
-// 수정필요
 public class SW_9280 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -30,9 +29,9 @@ public class SW_9280 {
 				W[i] = sc.nextInt();
 			}
 			
-			// dict 형태로 저장?
 			while(cnt != 2*m) {
 				int temp = sc.nextInt();
+				
 				if(temp < 0) {
 					p--;
 				}else {
