@@ -1,0 +1,17 @@
+T = int(input())
+for t in range(1, T + 1):
+    N, K = map(int, input().split())
+    tot = []
+    grade = ['A+', 'A0', 'A-', 'B+', 'B0', 'B-', 'C+', 'C0', 'C-', 'D0']
+    for n in range(N):
+        mid, fin, asign = map(int, input().split())
+        sum = mid * 0.35 + fin * 0.45 + asign * 0.20
+        tot.append(sum)
+
+    score = tot[K - 1]
+    tot.sort(reverse = True)
+
+    rank = tot.index(score) // (N//10)
+    res = grade[rank]
+
+    print('#{} {}'.format(t, res))
