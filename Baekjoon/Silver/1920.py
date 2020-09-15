@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep 14 17:20:30 2020
-
-@author: Ho
-"""
-
 n = input()
 arr = set(map(int, input().split()))
 m = input()

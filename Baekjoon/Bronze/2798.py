@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep  9 16:42:45 2020
-
-@author: Ho
-"""
-
 N, M = [int(i) for i in input().split()]
 lst = [int(i) for i in input().split()]
 

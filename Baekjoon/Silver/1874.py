@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 10 17:07:35 2020
-
-@author: Ho
-"""
-
 n = int(input())
 lst = []
 res = []

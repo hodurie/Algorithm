@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep  9 16:11:24 2020
-
-@author: Ho
-"""
-
 lst = [int(i) for i in input().split()]
 
 asc = 0

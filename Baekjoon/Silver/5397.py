@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 11 19:11:33 2020
-
-@author: Ho
-"""
-
 test_cases = int(input())
 
 for _ in range(test_cases):

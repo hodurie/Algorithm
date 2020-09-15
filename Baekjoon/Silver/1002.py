@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Aug 23 20:08:46 2020
-
-@author: Ho
-"""
 T = int(input())
 
 for i in range(T):
