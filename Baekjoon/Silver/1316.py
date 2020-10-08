@@ -10,4 +10,3 @@ for n in range(N):
     if string == temp:
         cnt += 1
 print(cnt)
-    
