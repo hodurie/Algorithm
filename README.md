@@ -8,6 +8,12 @@
 **Language_Coder**를 바탕으로 기본적인 문법을 익힘.
 
 ## SWExpertAcademy
-**D1**
-**D2**
-**D3**
+**D1**  
+**D2**  
+**D3**  
+
+## Baekjoon
+
+## FastCampus
+
+## 이것이 취업을 위한 코딩 테스트다
