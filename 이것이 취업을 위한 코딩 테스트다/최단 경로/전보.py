@@ -35,5 +35,5 @@ for d in distance:
     if d != INF:
         count += 1
         max_distance = max(d, max_distance)
-
+ 
 print(count -1, max_distance)
