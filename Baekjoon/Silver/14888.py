@@ -1,26 +1,31 @@
-N = int(input())
-nums = list(map(int, input().split()))
-add, sub, mul, div = map(int, input().split())
+from itertools import permutations
 
-min_val, max_val = 1e9, -1e9
+n = int(input())
 
-def dfs(i, res, add, sub, mul, div):
-    global max_val, min_val
-    if i == N:
-        max_val = max(res, max_val)
-        min_val = min(res, min_val)
-        return
+min_value = int(1e9 + 1)
+max_value = -int(1e9 + 1)
 
-    else:
-        if add:
-            dfs(i+1, res+nums[i], add-1, sub, mul, div)
-        if sub:
-            dfs(i+1, res-nums[i], add, sub-1, mul, div)
-        if mul:
-            dfs(i+1, res*nums[i], add, sub, mul-1, div)
-        if div:
-            dfs(i+1, int(res/nums[i]), add, sub, mul, div-1)
+arr = list(map(int, input().split()))
+count = list(map(int, input().split()))
+calc = ['+', '-', '*', '//']
 
-dfs(1, nums[0], add, sub, mul, div)
-print(max_val)
-print(min_val)
+lst = [calc[idx] for idx, c in enumerate(count) for i in range(c) if c != 0]
+    
+for p in set(permutations(lst, n-1)):
+    p = list(p)
+
+    v = arr[0]
+    for a, b in zip(p, arr[1:]):
+        if a == '//' and v < 0:
+            v *= -1
+            v //= b
+            v *= -1
+        else:
+            v = eval(''.join([str(v), a, str(b)]))
+    
+    if v < min_value:
+        min_value = v
+    if v > max_value:
+        max_value = v
+
+print('%d\n%d'%(max_value, min_value))
