@@ -1,28 +1,30 @@
-def solve(n, x, y):
-    global result
+def solution(n, x, y):
+    global cnt, r, c
     if n == 2:
-        if x == X and y == Y:
-            print(result)
-            return
-        result += 1
-        if x == X and y + 1 == Y:
-            print(result)
-            return
-        result += 1
-        if x + 1 == X and y == Y:
-            print(result)
-            return
-        result += 1
-        if x + 1 == X and y + 1 == Y:
-            print(result)
-            return
-        result += 1
-        return
-    solve(n/2, x, y)
-    solve(n/2, x, y + n/2)
-    solve(n/2, x + n/2, y)
-    solve(n/2, x + n/2, y + n/2)
+        if x == r and y == c:
+            print(cnt)
+            return 
+        cnt += 1
+        if x == r and y + 1 == c:
+            print(cnt)
+            return 
+        cnt += 1
+        if x + 1 == r and y == c:
+            print(cnt)
+            return 
+        cnt += 1
+        if x + 1 == r and y + 1 == c:
+            print(cnt)
+            return 
+        cnt += 1
+        return 
+    solution(n/2, x, y)
+    solution(n/2, x, y + n/2)
+    solution(n/2, x + n/2, y)
+    solution(n/2, x + n/2, y + n/2)
+    
+N, r, c = map(int, input().split())
 
-result = 0
-N, X, Y = map(int, input().split())
-solve(2**N, 0, 0)
+cnt = 0
+
+solution(2**N, 0, 0)
