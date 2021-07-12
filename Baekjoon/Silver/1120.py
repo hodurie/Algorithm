@@ -1,10 +1,14 @@
-A, B = map(str, input().split(' '))
+A, B = input().split()
 
-min_val = 101
-for i in range(0, len(B) - len(A) + 1):
+answer = int(1e9)
+
+for i in range(len(B) - len(A) + 1):
     cnt = 0
-    for j in range(0, len(A)):
-        if A[j] != B[j+i]:
+    for j in range(len(A)):
+        if A[j] != B[i + j]:
             cnt += 1
-    min_val = min(min_val, cnt)
-print(min_val)
+    
+    if answer >= cnt:
+        answer = cnt
+
+print(answer)
