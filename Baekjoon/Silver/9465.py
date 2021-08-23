@@ -1,18 +1,17 @@
-N = int(input())
+tc = int(input())
 
-for i in range(N):
-  s = []
-  
-  n = int(input())
-  
-  for k in range(2):
-    s.append(list(map(int, input().split())))
+for _ in range(tc):
+    n = int(input())
+    arr = []
+
+    for _ in range(2):
+        arr.append(list(map(int, input().split())))
+
+    arr[0][1] += arr[1][0]
+    arr[1][1] += arr[0][0]
     
-  s[0][1] += s[1][0]
-  s[1][1] += s[0][0]
-  
-  for j in range(2, n):
-    s[0][j] += max(s[1][j - 1], s[1][j - 2])
-    s[1][j] += max(s[0][j - 1], s[0][j - 2])
-    
-  print(max(s[0][n - 1], s[1][n - 1]))
+    for i in range(2, n):
+        arr[0][i] += max(arr[1][i-1], arr[1][i-2])
+        arr[1][i] += max(arr[0][i-1], arr[0][i-2])
+
+    print(max(arr[0][n-1], arr[1][n-1]))
